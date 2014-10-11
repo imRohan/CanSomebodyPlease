@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Can Somebody Please...</title>
+<link rel="icon" href="{Favicon}"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+<meta name="viewport" content="width=950"/> <!-- iPhone -->
+<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/e7frb4k/msdmujfkk/style1.css" />
+<style type="text/css">
+.textcontent img {
+    max-width: 100%;
+}
+
+{CustomCSS}
+
+</style>
+<script>
+$('#row1').click(function()
+{
+  $(this).fadeTo(500, 1); // 100% opacity.  change 1 to .9 or whatever other value between 0 and 1 you want
+  $(this).find('#hidden').fadeIn(); // fade all the way in.  Could just do $('#hidden') but I assume your code will evolve to where it will be a div with a class of hidden instead of an ID, as an ID must be unique per HTML document
+});
+</script>
+
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <script>
+    
+        //When DOM loaded we attach click event to each button
+        $(document).ready(function() {
+            
+            //when user clicks a button this event is fired
+            $('.button').click(function(){
+                
+                //we added the value to the button's name attribute  
+                var opacityValue = $(this).attr('name');
+
+                //this is where the magic happens
+                //we select the box element and change the css opacity parameter
+                $('#menu').css('opacity', opacityValue);
+            
+            }); 
+           
+        });
+
+    </script>
+
+<script type="text/javascript">
+<!--
+// Use the following variable to specify 
+// the number of images
+var NumberOfImages = 5
+
+var img = new Array(NumberOfImages)
+
+// Use the following variables to specify the image names:
+img[0] = "http://i.imgur.com/o7Ol3sF.png"
+img[1] = "http://i.imgur.com/mpnEkWI.png"
+img[2] = "http://i.imgur.com/UoH2fBh.png"
+img[3] = "http://i.imgur.com/gBuJtYp.png"
+img[4] = "http://i.imgur.com/o2UwoaP.png"
+
+
+var imgNumber = 0
+
+function NextImage()
+{
+    imgNumber++
+    if (imgNumber == NumberOfImages)
+        imgNumber = 0
+    document.images["VCRImage"].src = img[imgNumber]
+}
+
+function PreviousImage()
+{
+    imgNumber--
+    if (imgNumber < 0)
+        imgNumber = NumberOfImages - 1
+    document.images["VCRImage"].src = img[imgNumber]
+}
+setInterval(function(){NextImage()},10000);
+//-->
+</script>
+
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+<h1><a href="/">{Title}</a></h1>
+<div id="description">
+{block:Description}
+<a href="/">{Description} </a>
+{/block:Description}
+</div>
+<div id="cats">
+<ul class="clearfix">
+<li><a href="/tagged/selfactualization"><span style="background-color: #3b5998; color:white">&nbsp Self-Actualization &nbsp </span></a></li>
+<li><a href="/tagged/esteem"><span style="background-color: #801de1; color:white">&nbsp Esteem &nbsp </span></a></li>
+<li><a href="/tagged/Love"><span style="background-color: #009995; color:white">&nbsp Love & Belonging &nbsp</span></a></li>
+<li><a href="/tagged/safety"><span style="background-color: #f72331; color:white">&nbsp Safety &nbsp</span></a></li>
+<li><a href="/tagged/physiological"><span style="background-color: #e69e00; color:white">&nbsp Physiological &nbsp</span></a></li>
+<li> // </li>
+<li><a href="/random"><span style="background-color: #ffffff; color:black">&nbsp Random &nbsp </span></a></li>
+<li><a href="/post/63298034160/about"><span style="background-color: #ffffff; color:black">&nbsp About &nbsp </span></a></li>
+<li><input type="button" value="More (+)" class="button" name="1"/></li>
+</ul>
+
+</div>
+<td class="hidden">
+<div id="menu">
+<ul class="clearfix">
+<li><a href="/tagged/explain"><span style="background-color: #f16233; color:white">&nbsp Explain &nbsp </span></a></li>
+<li><a href="/tagged/help"><span style="background-color: #00b5b5; color:white">&nbsp Help &nbsp </span></a></li>
+<li><a href="/tagged/talk"><span style="background-color: #8DB2B2; color:white">&nbsp Talk &nbsp </span></a></li>
+<li><a href="/tagged/text"><span style="background-color: #FC9D9A; color:white">&nbsp Text &nbsp </span></a></li>
+<li><a href="/tagged/come"><span style="background-color: #EEBB84; color:white">&nbsp Come &nbsp </span></a></li>
+<li><a href="/tagged/touch"><span style="background-color: #C8C8A9; color:white">&nbsp Touch &nbsp </span></a></li>
+<li><a href="/tagged/Bring"><span style="background-color: #83AF9B; color:white">&nbsp Bring &nbsp </span></a></li>
+<li><a href="/tagged/take"><span style="background-color: #3498DB; color:white">&nbsp Take &nbsp </span></a></li>
+<li><a href="/tagged/send"><span style="background-color: #AEEB6F; color:white">&nbsp Send &nbsp </span></a></li>
+<li><a href="/tagged/feed"><span style="background-color: #004056; color:white">&nbsp Feed &nbsp </span></a></li>
+<li><a href="/tagged/buy"><span style="background-color: #2C858D; color:white">&nbsp Buy &nbsp </span></a></li>
+<li><a href="/tagged/kill"><span style="background-color: #000000; color:red">&nbsp Kill &nbsp </span></a></li>
+<li><input type="button" value="Less (-)" class="button"  name="0.00" /></li>
+</ul>
+</div>
+</td>
+
+<!--<div id="controls">
+<img src="http://static.tumblr.com/e7frb4k/2cUmtwqen/thiss.png">
+</div> -->
+</div>
+{block:PermalinkPagination} 
+<div class="navigation">
+{block:PreviousPost}<a class="navleft" href="/">NEW</a>{/block:PreviousPost}
+{block:NextPost}<a class="navright" href="/random">RANDOM</a>{/block:NextPost}
+</div>
+{/block:PermalinkPagination}
+{block:Pagination} 
+<div class="navigation">
+{block:PreviousPage}<a class="navleft" href="{PreviousPage}">PREV</a>{/block:PreviousPage}
+
+{block:NextPage}<a class="navright" href="{NextPage}">NEXT</a>{/block:NextPage}
+</div>
+{/block:Pagination}
+{block:DayPage} 
+{block:DayPagination}
+<div class="navigation">            
+{block:PreviousDayPage}<a class="navleft" href="{PreviousDayPage}">&laquo; previous day</a> {/block:PreviousDayPage} 
+{block:NextDayPage}<a class="navright" href="{NextDayPage}">next day &raquo;</a> {/block:NextDayPage}
+</div>
+{/block:DayPagination}
+{/block:DayPage}
+{block:SearchPage}
+<div id="searchresultcount" class="post">
+<div class="textcontent">
+<p>Your search for <span class="query">{SearchQuery}</span> returned {SearchResultCount} result(s).</p>
+</div>
+</div>
+{/block:SearchPage}
+{block:Posts}
+<div class="post">
+{block:NewDayDate}
+<div class="date">
+<a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{DayOfMonthWithZero}</a>
+<em class="day">{MonthNumberWithZero}</em>
+<em class="year">{ShortYear}</em>   
+</div>
+{/block:NewDayDate} 
+{block:RebloggedFrom} 
+<div class="reblog clearfix">
+<a href="{ReblogParentURL}"><img src="{ReblogParentPortraitURL-30}" alt="" /></a>
+reblogged from: <a href="{ReblogParentURL}">{ReblogParentTitle}</a>
+</div>
+{/block:RebloggedFrom}
+{block:Regular}
+<div class = "imgmask">
+<img src="http://i.imgur.com/uzBz4up.jpg">
+</div>
+<div class="textcontent">
+{block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+{Body}
+</div>
+{/block:Regular}  
+{block:Photo}<div class="photoholder">{LinkOpenTag}<span class="photo"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></span>{LinkCloseTag}<div class="imageinfo">{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}</div></div>{/block:Photo}  
+{block:Quote}
+<blockquote class="singlequote">{Quote}{block:Source}<cite>{Source}</cite>{/block:Source}</blockquote>
+{/block:Quote}
+{block:Link}
+<div class="textcontent">
+<h3><a href="{URL}" class="link" {Target}>{Name}</a></h3>
+{block:Description}
+<div class="caption">{Description}</div>
+{/block:Description}
+</div>
+{/block:Link}
+{block:Conversation}
+{block:Title}<h3 class="conversationheader"><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+<ul class="conversation">
+{block:Lines}
+<li class="{Alt}">
+<blockquote>{block:Label}<cite>{Label}</cite>{/block:Label}
+{Line}
+</blockquote>
+</li>
+{/block:Lines}
+</ul>
+{/block:Conversation}
+{block:Audio}
+<div class="textcontent">
+{AudioPlayerGrey}
+{block:Caption}
+<div class="caption">{Caption}</div>
+{/block:Caption}
+</div>
+{/block:Audio}         
+{block:Video}
+{Video-500}
+{block:Caption}
+<div class="textcontent">{Caption}</div>
+{/block:Caption}
+{/block:Video}
+{block:PostNotes}<a name="notes"> </a>{PostNotes}{/block:PostNotes}
+</div>
+{/block:Posts}
+
+{block:DayPage} 
+{block:DayPagination}
+<div class="navigation">            
+{block:PreviousDayPage}<a class="navleft" href="{PreviousDayPage}">&laquo; previous day</a> {/block:PreviousDayPage} 
+{block:NextDayPage}<a class="navright" href="{NextDayPage}">next day &raquo;</a> {/block:NextDayPage}
+</div>
+{/block:DayPagination}
+{/block:DayPage}
+
+<div id="footer">
+<ul class="clearfix">
+
+</ul>
+<li>Lovingly crafted by: <IMG SRC="http://i.imgur.com/UoH2fBh.png" NAME="VCRImage"  align="middle" height="21" width="59"></li>
+</div>
+</div>
+<script type="text/javascript">
+function getElementsByClassName(node, classname)
+{
+    var a = [];
+    var re = new RegExp('\\b' + classname + '\\b');
+    var els = node.getElementsByTagName("*");
+    for(var i=0,j=els.length; i<j; i++)
+        if(re.test(els[i].className))a.push(els[i]);
+    return a;
+}
+</script>
+
+
+
+
+<!--[if IE 6]>
+<script type="text/javascript">
+var textposts = getElementsByClassName(document.getElementById('wrapper'), 'textcontent');
+for(i=0;i<
+textposts.length;i++) {
+    images = textposts[i].getElementsByTagName('img');
+    for(j=0;j<images.length;j++) {
+         if(images[j].width > 460) {
+              images[j].setAttribute('width','460');
+              }
+         }
+    }
+</script>
+<![endif]-->
+</body>
+</html>
